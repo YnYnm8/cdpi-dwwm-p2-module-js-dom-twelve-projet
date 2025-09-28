@@ -3,7 +3,14 @@ Nouvelles compétences:
 - forEach
 - querySelectorAll
 */
-const switch_elem = document.querySelector("#switch");
-switch_elem.addEventListener("click", function () {
-    switch_elem.classList.toggle("switch.darkmode");
+
+const allElemArr = document.querySelectorAll(" * ");
+const switchElem = document.querySelector(".switch");
+const iconElem = document.querySelector(".icon");
+
+switchElem.addEventListener("click", function () {
+    allElemArr.forEach(function (allElem) {
+        allElem.classList.toggle("darkmode");
+    })
+    iconElem.classList.toggle("fa-moon");
 })
