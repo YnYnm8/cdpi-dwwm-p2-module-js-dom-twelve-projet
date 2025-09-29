@@ -60,6 +60,3 @@ button{
 button:active{
     scale:0.98;
 }
-.show{
-    display:flex;
-}
