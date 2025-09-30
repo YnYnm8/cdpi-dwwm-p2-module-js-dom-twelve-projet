@@ -19,4 +19,22 @@ const panierMsg = document.querySelector(".panier-msg");
 // 5. Je crée une variable qui contient le nombre de produits ajoutées ua panier
 let panier = 0;
 
-// ...
+btnAdd.addEventListener("click", function () {
+    panier++;
+    // console.log(panier);
+    //panierMsg.innerText = `Vous avez ${panier}  produits dans votre panier.`
+    panierMsg.innerText = "Vous avez " + panier + " produits dans votre panier."
+})
+
+//Vignettes
+vignettes.forEach(function (vignette) {
+    vignette.addEventListener("click", function () {
+        const vignetteSrc = vignette.getAttribute("src");
+        const fullImgSrc = fullImg.getAttribute("src");
+        
+        fullImg.setAttribute("src", vignetteSrc);
+        vignette.setAttribute("src", fullImgSrc);
+    })
+})
+
+
